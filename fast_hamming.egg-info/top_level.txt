@@ -1,0 +1,2 @@
+_hamming
+fast_hamming
