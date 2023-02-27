@@ -1,0 +1,3 @@
+_damerau_levenshtein
+_hamming
+fast_distance

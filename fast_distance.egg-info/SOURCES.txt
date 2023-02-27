@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+c_distance/damerau_levenshtein.c
+c_distance/hamming.c
+fast_distance/__init__.py
+fast_distance/_version.py
+fast_distance/distance.py
+fast_distance.egg-info/PKG-INFO
+fast_distance.egg-info/SOURCES.txt
+fast_distance.egg-info/dependency_links.txt
+fast_distance.egg-info/top_level.txt
