@@ -1,5 +1,5 @@
 # fast_distance: fast C implementations of edit distance algorithms
-![PyPI - Downloads](https://img.shields.io/pypi/dm/fast_distance)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/fast-distance)
 
 ## What is it?
 
