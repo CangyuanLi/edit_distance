@@ -13,6 +13,9 @@ verify correctness.
 
 # Usage:
 
+Warning- Currently only works on Mac and Linux due to C features not found in the Windows C
+compiler
+
 ## Installing
 
 The easiest way is to install **fast_distance** is from PyPI using pip:
