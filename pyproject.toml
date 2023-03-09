@@ -6,5 +6,5 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [tool.pytest.ini_options]
-addopts = "--cov=hamming"
+addopts = "--cov=fast_distance"
 testpaths = ["tests"]
