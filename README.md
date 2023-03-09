@@ -41,3 +41,4 @@ fast_distance.damerau_levenshtein_distance(s1, s2)
 * Further performance improvements
 * partial_ratio
 * token_sort_ratio
+* Fix compilation errors on Windows
