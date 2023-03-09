@@ -1,5 +1,6 @@
 # fast_distance: fast C implementations of edit distance algorithms
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/fast-distance)
+![Tests](https://github.com/CangyuanLi/edit_distance/actions/workflows/tests.yml/badge.svg)
 
 ## What is it?
 
