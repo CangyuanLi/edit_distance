@@ -28,3 +28,7 @@
 **.xls
 
 **/*-checkpoint*
+
+**/.pytest_cache
+**/.tox
+**.coverage
