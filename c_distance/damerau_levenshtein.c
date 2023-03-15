@@ -2,8 +2,11 @@
 #include <Python.h>
 #include <string.h>
 
+// This is a 1:1 translation of https://github.com/jamesturk/jellyfish/blob/main/jellyfish/_jellyfish.py
+
 int min_int(int arr[], size_t size)
 {
+    // simply loop over an array of integers to find the min
     int min = arr[0];
     for (size_t i = 1; i < size; i++)
     {
@@ -22,7 +25,7 @@ static PyObject* distance(PyObject *self, PyObject *args)
     const char* s1;
     const char* s2;
 
-    if ( !PyArg_ParseTuple(args, "ss", &s1, &s2) )
+    if ( !PyArg_ParseTuple(args, "ss", &s1, &s2) ) // s means string argument
     {
         return NULL;
     }
@@ -34,6 +37,7 @@ static PyObject* distance(PyObject *self, PyObject *args)
     int nrows = len1 + 2;
     int ncols = len2 + 2;
 
+    // initialize distance matrix
     int score[nrows][ncols];
     for (size_t i = 0; i < nrows; i++)
     {
@@ -55,7 +59,11 @@ static PyObject* distance(PyObject *self, PyObject *args)
         score[1][i + 1] = i;
     }
     
+    // Since we are only dealing with ascii characters, this is equivalent to the dictionary
+    // in the Python implementation. Instead of accessing using the character as the index, we
+    // can cast the character to its integer version, and access by index.
     int da[256] = { 0 };
+
     for (size_t i = 1; i <= len1; i++)
     {
         int db = 0;
