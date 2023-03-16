@@ -22,8 +22,8 @@ int min_int(int arr[], size_t size)
 
 static PyObject* distance(PyObject *self, PyObject *args)
 {
-    const char* s1;
-    const char* s2;
+    const unsigned char* s1;
+    const unsigned char* s2;
 
     if ( !PyArg_ParseTuple(args, "ss", &s1, &s2) ) // s means string argument
     {
@@ -69,7 +69,7 @@ static PyObject* distance(PyObject *self, PyObject *args)
         int db = 0;
         for (size_t j = 1; j <= len2; j++)
         {
-            const char s2_char = s2[j - 1];
+            const unsigned char s2_char = s2[j - 1];
             int i1 = da[(int)s2_char];
             int j1 = db;
             int cost = 1;
@@ -87,7 +87,7 @@ static PyObject* distance(PyObject *self, PyObject *args)
             };
             score[i + 1][j + 1] = min_int(arr, 4);
         }
-        const char s1_char = s1[i - 1];
+        const unsigned char s1_char = s1[i - 1];
         da[(int)s1_char] = i;
     }
         
