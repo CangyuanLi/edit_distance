@@ -30,12 +30,12 @@ static PyObject* distance(PyObject *self, PyObject *args)
         return NULL;
     }
 
-    int len1 = strlen(s1);
-    int len2 = strlen(s2);
-    int infinite = len1 + len2;
+    size_t len1 = strlen(s1);
+    size_t len2 = strlen(s2);
+    size_t infinite = len1 + len2;
 
-    int nrows = len1 + 2;
-    int ncols = len2 + 2;
+    size_t nrows = len1 + 2;
+    size_t ncols = len2 + 2;
 
     // initialize distance matrix
     int score[nrows][ncols];
