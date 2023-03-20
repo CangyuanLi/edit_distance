@@ -88,7 +88,7 @@ static PyObject* distance(PyObject *self, PyObject *args)
             score[i + 1][j + 1] = min_int(arr, 4);
         }
         const unsigned char s1_char = s1[i - 1];
-        da[(int)s1_char] = i;
+        da[(size_t)s1_char] = i;
     }
         
     long distance = score[len1 + 1][len2 + 1];
