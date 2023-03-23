@@ -31,4 +31,4 @@
 
 **/.pytest_cache
 **/.tox
-**.coverage
+**.coverage*
