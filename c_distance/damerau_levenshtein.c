@@ -39,13 +39,7 @@ static PyObject* distance(PyObject *self, PyObject *args)
 
     // initialize distance matrix
     int score[nrows][ncols];
-    for (size_t i = 0; i < nrows; i++)
-    {
-        for (size_t j = 0; j < ncols; j++)
-        {
-            score[i][j] = 0;
-        }
-    }
+    memset(score, 0, sizeof(score[0][0] * nrows * ncols));
 
     score[0][0] = infinite;
     for (size_t i = 0; i <= len1; i++)
@@ -62,7 +56,8 @@ static PyObject* distance(PyObject *self, PyObject *args)
     // Since we are only dealing with ascii characters, this is equivalent to the dictionary
     // in the Python implementation. Instead of accessing using the character as the index, we
     // can cast the character to its integer version, and access by index.
-    int da[256] = { 0 };
+    int da[256];
+    memset(da, 0, sizeof(da));
 
     for (size_t i = 1; i <= len1; i++)
     {
